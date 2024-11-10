@@ -17,6 +17,13 @@ public class BusyLightHubPlugin
         _currentUser = currentUser;
 
         _client = new BusyLightHubClient(_currentUser);
+        _client.ConnectAsync();
+    }
+
+    [KernelFunction, Description("Connect")]
+    public async Task Connect()
+    {
+        await _client.ConnectAsync();
     }
 
     [KernelFunction, Description("Send Wrong")]
@@ -28,7 +35,7 @@ public class BusyLightHubPlugin
     [KernelFunction, Description("Send Correct")]
     public async Task Correct()
     {
-        await _client.SendActionAsync(_destinationUser, "Wrong");
+        await _client.SendActionAsync(_destinationUser, "Correct");
     }
 
     [KernelFunction, Description("Send Banana Flash")]

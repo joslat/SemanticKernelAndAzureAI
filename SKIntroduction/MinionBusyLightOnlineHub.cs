@@ -25,7 +25,10 @@ public class MinionBusyLightOnlineHub
         var openAIFunctionEnabledModelId = "gpt-4o";
         var openAIApiKey = Environment.GetEnvironmentVariable("OPENAI_APIKEY");
         var userMessage = "";
-        var pathToPlugin = Path.Combine(Directory.GetCurrentDirectory(), "MinionBLHubAgent.yaml");
+        var pathToPlugin = Path.Combine(
+            Directory.GetCurrentDirectory(),
+            "Agents",
+            "MinionBLHubAgent.yaml");
         string agentDefinition = File.ReadAllText(pathToPlugin);
 
         // Plugin for the BusyLightController

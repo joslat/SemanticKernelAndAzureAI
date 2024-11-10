@@ -4,8 +4,8 @@ namespace BusyLightServer;
 
 public class BusyLightHub : Hub
 {
-    public async Task SendBusyLightAction(string user, string action)
+    public async Task SendAction(string user, string action)
     {
-        await Clients.All.SendAsync("BusyLightAction", user, action);
+        await Clients.All.SendAsync("ReceiveAction", user, action);
     }
 }
