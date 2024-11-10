@@ -1,0 +1,6 @@
+@BusyLightServer_HostAddress = http://localhost:5068
+
+GET {{BusyLightServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
