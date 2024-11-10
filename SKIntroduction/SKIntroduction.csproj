@@ -8,11 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Agents\MinionBLHubAgent.yaml" />
     <None Remove="MinionAgent.yaml" />
     <None Remove="MinionBLAgent.yaml" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Agents\MinionBLHubAgent.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Agents\MinionBLAgent.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -22,9 +26,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.10" />
     <PackageReference Include="Microsoft.Semantickernel" Version="1.13.0" />
     <PackageReference Include="Microsoft.SemanticKernel.Experimental.Agents" Version="1.13.0-alpha" />
 	<PackageReference Include="com.plenom.BusylightSDK" Version="4.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Client\" />
   </ItemGroup>
 
 </Project>

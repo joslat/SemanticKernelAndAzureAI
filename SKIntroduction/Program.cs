@@ -12,8 +12,11 @@ Console.WriteLine("Hello, Semantic Kernel!");
 //Personas agentsExample = new();
 //await agentsExample.Execute();
 
-MinionBusyLight minionBusyLight = new MinionBusyLight();
-await minionBusyLight.Execute();    
+//MinionBusyLight minionBusyLight = new MinionBusyLight();
+//await minionBusyLight.Execute();
+
+MinionBusyLightOnlineHub minionBusyLightOnlineHub = new();
+await minionBusyLightOnlineHub.Execute();
 
 //CriticWorkflow agentsWorkflowExample = new();
 //await agentsWorkflowExample.Execute();
