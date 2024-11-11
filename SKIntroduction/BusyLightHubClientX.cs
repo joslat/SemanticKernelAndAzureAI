@@ -9,7 +9,7 @@ namespace SKIntroduction;
 /// - Correct
 /// - Attention Banana blink.
 /// </summary>
-public class BusyLightHubClient
+public class BusyLightHubClientX
 {
     /// <summary>
     /// The connection to the Hub
@@ -20,7 +20,7 @@ public class BusyLightHubClient
 
     public BusyLightController BusyLightController { get; set; }
 
-    public BusyLightHubClient(string user= "Jose")
+    public BusyLightHubClientX(string user= "Jose")
     {
         User = user;
         Connection = new HubConnectionBuilder()
