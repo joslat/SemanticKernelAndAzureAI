@@ -25,7 +25,7 @@ public class BusyLightHubClient
         User = user;
         Connection = new HubConnectionBuilder()
             //.WithUrl("https://d63a-2a02-aa11-b280-580-2080-daa5-60e6-6ad8.ngrok-free.app/BusyLightHub")
-            .WithUrl("https://abde-2a02-aa11-b280-580-d044-813-3c40-ec92.ngrok-free.app/BusyLightHub")
+            .WithUrl("https://116c-2a02-aa11-b280-580-2080-daa5-60e6-6ad8.ngrok-free.app/BusyLightHub")
             .Build();
         BusyLightController = new BusyLightController();
 

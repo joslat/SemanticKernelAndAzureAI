@@ -7,7 +7,6 @@ public static class BasicSK
 {
     public static async Task Execute()
     {
-
         var modelDeploymentName = "gpt-4o";
         var azureOpenAIEndpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
         var azureOpenAIApiKey = Environment.GetEnvironmentVariable("AZUREOPENAI_APIKEY");
@@ -19,7 +18,7 @@ public static class BasicSK
                 azureOpenAIApiKey)
             .Build();
 
-        //kernel.ImportPluginFromType<WhatDateIsIt>();
+        kernel.ImportPluginFromType<WhatDateIsIt>();
 
         string userPrompt = "I would like to know what date is it and 5 significative" +
             "things that happened on the past on this day.";
